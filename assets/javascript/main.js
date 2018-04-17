@@ -34,13 +34,14 @@ window.eqfeed_callback = function (results) {
 
 $('#btn').click( function(){
     var newBTN = $('<button>');
-    newBTN.attr('href','http://www.ticketmaster.com');
+    newBTN.attr('href','https://developers.google.com/maps/');
     newBTN.attr('id','newBTN');
-    newBTN.addClass('btn-dark');
-    newBTN.text('Button');
+    newBTN.addClass('btn-secondary');
+    newBTN.text('Documentation');
     $('main').append(newBTN);
 })
 
+// Opens a Popup Window for the href of the BTN
 $(document).on('click', '#newBTN', function() {
-    $("main").html("<h3>You are click happy aren't ya</h3>");
+    window.open($(this).attr("href"), "width=600,height=600,scrollbars=yes");
 })
