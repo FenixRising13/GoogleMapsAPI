@@ -31,3 +31,16 @@ window.eqfeed_callback = function (results) {
         });
     }
 }
+
+$('#btn').click( function(){
+    var newBTN = $('<button>');
+    newBTN.attr('href','http://www.ticketmaster.com');
+    newBTN.attr('id','newBTN');
+    newBTN.addClass('btn-dark');
+    newBTN.text('Button');
+    $('main').append(newBTN);
+})
+
+$(document).on('click', '#newBTN', function() {
+    $("main").html("<h3>You are click happy aren't ya</h3>");
+})
